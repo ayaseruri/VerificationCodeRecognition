@@ -4,6 +4,7 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.FilenameFilter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -26,6 +27,7 @@ public class Main {
 
     private static final int SPAN_COUNT = 5;
     private static final int SPLIT_LENGTH_HOLD = 2;
+    private static final int SCALE_LENGTH = 32;
 
     /**
      * 整个程序开始执行的地方
@@ -34,6 +36,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         System.out.println(TITLE);
 
+        train();
         recognition();
     }
 
@@ -49,18 +52,37 @@ public class Main {
         }
 
         File[] rawImageFiles = Utils.getImages(recRawImageFile);
+        StringBuilder rawImageFileName = new StringBuilder();
         for (File imageFile : rawImageFiles) {
+            rawImageFileName.setLength(0);
+
             BufferedImage bufferedImage = ImageIO.read(imageFile);
             bufferedImage = imagePreProgress(bufferedImage);
             for (BufferedImage slitImage : imageSplit(bufferedImage)) {
-                for (File dataFile : trainDataFile.listFiles()) {
-                    byte[][] trainData = Utils.readBytesFormFile(dataFile);
-                    byte[][] recData = getData(Utils.toBufferedImage(
-                            slitImage.getScaledInstance(trainData.length, trainData[0].length, Image.SCALE_DEFAULT)));
-
+                byte[] recData = getData(slitImage);
+                HashMap<String, Double> simis = new HashMap<>();
+                for (File dataFile : trainDataFile.listFiles(new FilenameFilter() {
+                    @Override
+                    public boolean accept(File dir, String name) {
+                        return name.toLowerCase().endsWith(Utils.DATA_FILE_EX);
+                    }
+                })) {
+                    byte[] trainData = Utils.readBytesFormFile(dataFile);
+                    simis.put(dataFile.getName(), Utils.similarity(trainData, recData));
                 }
 
+                String maxName = "";
+                double maxSimi = 0;
+                for (String key : simis.keySet()) {
+                    if (maxSimi < simis.get(key)) {
+                        maxName = key;
+                        maxSimi = simis.get(key);
+                    }
+                }
+
+                rawImageFileName.append(maxName.substring(0, maxName.lastIndexOf(Utils.DATA_FILE_EX)));
             }
+            imageFile.renameTo(new File(RECOGNITION_RAW_IMAGE_PATH + rawImageFileName.toString() + Utils.IMAGE_FILE_EX));
         }
     }
 
@@ -103,7 +125,7 @@ public class Main {
                             ImageIO.write(splitImage, "JPG", charFile);
                         }
 
-                        File dataFile = new File(TRAIN_DATA_PATH + imageFileName.charAt(i));
+                        File dataFile = new File(TRAIN_DATA_PATH + imageFileName.charAt(i) + Utils.DATA_FILE_EX);
                         if (!dataFile.exists()) {
                             Utils.writeBytes2File(getData(splitImage), dataFile);
                         }
@@ -217,7 +239,10 @@ public class Main {
                     }
                 }
 
-                subImages.add(subImage.getSubimage(0, start, width, end - start + 1));
+                subImages.add(
+                        Utils.toBufferedImage(
+                                subImage.getSubimage(0, start, width, end - start + 1)
+                                        .getScaledInstance(SCALE_LENGTH, SCALE_LENGTH, Image.SCALE_SMOOTH)));
             }
         }
 
@@ -227,15 +252,16 @@ public class Main {
     /**
      * 第三部训练数据模型：将第二步的图片中黑色用 1 表示，其他用 0 表示，建立一个二维数组；
      */
-    private static byte[][] getData(BufferedImage bufferedImage) {
+    private static byte[] getData(BufferedImage bufferedImage) {
         int width = bufferedImage.getWidth();
         int height = bufferedImage.getHeight();
 
-        byte[][] pixs = new byte[width][height];
+        byte[] pixs = new byte[width * height];
 
+        int count = 0;
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
-                pixs[x][y] = (byte) (Utils.isBlack(bufferedImage.getRGB(x, y)) ? 1 : 0);
+                pixs[count++] = (byte) (Utils.isBlack(bufferedImage.getRGB(x, y)) ? 1 : 0);
             }
         }
 

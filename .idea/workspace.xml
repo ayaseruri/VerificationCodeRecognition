@@ -1,7 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72b90f09-398f-4fb7-82b8-61128c80b4c7" name="Default" comment="" />
+    <list default="true" id="72b90f09-398f-4fb7-82b8-61128c80b4c7" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/train/3data/1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/train/3data/2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/train/3data/3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/train/3data/4" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/train/3data/5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/train/3data/6" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/train/3data/7" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/train/3data/8" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/train/3data/9" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/train/3data/A" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/train/3data/B" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/train/3data/C" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/train/3data/D" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/train/3data/E" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/train/3data/F" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VerificationCodeRecognition/au/edu/uq/Main.class" afterPath="$PROJECT_DIR$/out/production/VerificationCodeRecognition/au/edu/uq/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VerificationCodeRecognition/au/edu/uq/Utils$1.class" afterPath="$PROJECT_DIR$/out/production/VerificationCodeRecognition/au/edu/uq/Utils$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VerificationCodeRecognition/au/edu/uq/Utils.class" afterPath="$PROJECT_DIR$/out/production/VerificationCodeRecognition/au/edu/uq/Utils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/train/2split/1.jpg" afterPath="$PROJECT_DIR$/train/2split/1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/train/2split/2.jpg" afterPath="$PROJECT_DIR$/train/2split/2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/train/2split/3.jpg" afterPath="$PROJECT_DIR$/train/2split/3.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/train/2split/4.jpg" afterPath="$PROJECT_DIR$/train/2split/4.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/train/2split/5.jpg" afterPath="$PROJECT_DIR$/train/2split/5.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/train/2split/6.jpg" afterPath="$PROJECT_DIR$/train/2split/6.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/train/2split/7.jpg" afterPath="$PROJECT_DIR$/train/2split/7.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/train/2split/8.jpg" afterPath="$PROJECT_DIR$/train/2split/8.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/train/2split/9.jpg" afterPath="$PROJECT_DIR$/train/2split/9.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/train/2split/A.jpg" afterPath="$PROJECT_DIR$/train/2split/A.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/train/2split/B.jpg" afterPath="$PROJECT_DIR$/train/2split/B.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/train/2split/C.jpg" afterPath="$PROJECT_DIR$/train/2split/C.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/train/2split/D.jpg" afterPath="$PROJECT_DIR$/train/2split/D.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/train/2split/E.jpg" afterPath="$PROJECT_DIR$/train/2split/E.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/train/2split/F.jpg" afterPath="$PROJECT_DIR$/train/2split/F.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/au/edu/uq/Main.java" afterPath="$PROJECT_DIR$/src/au/edu/uq/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/au/edu/uq/Utils.java" afterPath="$PROJECT_DIR$/src/au/edu/uq/Utils.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,28 +53,15 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/au/edu/uq/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+            <state relative-caret-position="2272">
+              <caret line="82" column="81" lean-forward="false" selection-start-line="82" selection-start-column="81" selection-end-line="82" selection-end-column="81" />
               <folding>
                 <element signature="docComment;class#Main#0" expanded="false" />
-                <element signature="docComment;method#main#0;class#Main#0" expanded="false" />
-                <element signature="docComment;method#imagePreProgress#0;class#Main#0" expanded="false" />
-                <element signature="method#imagePreProgress#0;class#Main#0" expanded="false" />
-                <element signature="docComment;method#imageSplit#0;class#Main#0" expanded="false" />
-                <element signature="method#imageSplit#0;class#Main#0" expanded="false" />
                 <element signature="docComment;method#getData#0;class#Main#0" expanded="false" />
-                <element signature="method#getData#0;class#Main#0" expanded="false" />
+                <marker date="1495619136000" expanded="false" signature="5507:5661" ph="/**...*/" />
+                <marker date="1495619136000" expanded="false" signature="5741:7215" ph="{...}" />
+                <marker date="1495619136000" expanded="false" signature="7221:7381" ph="/**...*/" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Image.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/src.zip!/java/awt/Image.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="752">
-              <caret line="168" column="17" lean-forward="false" selection-start-line="168" selection-start-column="17" selection-end-line="168" selection-end-column="17" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -45,13 +69,17 @@
       <file leaf-file-name="Utils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/au/edu/uq/Utils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="97" column="47" lean-forward="false" selection-start-line="97" selection-start-column="32" selection-end-line="97" selection-end-column="47" />
+            <state relative-caret-position="-994">
+              <caret line="15" column="43" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="43" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#621#622#0" expanded="true" />
-                <element signature="e#710#711#0" expanded="true" />
+                <element signature="docComment;class#Utils#0" expanded="false" />
+                <element signature="docComment;method#getImages#0;class#Utils#0" expanded="false" />
+                <element signature="method#getImages#0;class#Utils#0" expanded="false" />
+                <element signature="class#570:780" expanded="false" />
+                <element signature="docComment;method#isBlack#0;class#Utils#0" expanded="false" />
                 <element signature="docComment;method#isWhite#0;class#Utils#0" expanded="false" />
+                <element signature="docComment;method#writeBytes2File#0;class#Utils#0" expanded="false" />
+                <element signature="docComment;method#readBytesFormFile#0;class#Utils#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -60,8 +88,18 @@
       <file leaf-file-name="BufferedReader.java" pinned="false" current-in-tab="false">
         <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/src.zip!/java/io/BufferedReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
+            <state relative-caret-position="433">
               <caret line="387" column="18" lean-forward="false" selection-start-line="387" selection-start-column="18" selection-end-line="387" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Graphics.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/src.zip!/java/awt/Graphics.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="709">
+              <caret line="920" column="28" lean-forward="false" selection-start-line="920" selection-start-column="28" selection-end-line="920" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -376,7 +414,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="13" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/au/edu/uq/Utils.java</url>
+          <line>94</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="15" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -391,13 +437,10 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#Main#0" expanded="false" />
-            <element signature="docComment;method#main#0;class#Main#0" expanded="false" />
-            <element signature="docComment;method#imagePreProgress#0;class#Main#0" expanded="false" />
-            <element signature="method#imagePreProgress#0;class#Main#0" expanded="false" />
-            <element signature="docComment;method#imageSplit#0;class#Main#0" expanded="false" />
-            <element signature="method#imageSplit#0;class#Main#0" expanded="false" />
             <element signature="docComment;method#getData#0;class#Main#0" expanded="false" />
-            <element signature="method#getData#0;class#Main#0" expanded="false" />
+            <marker date="1495619136000" expanded="false" signature="5507:5661" ph="/**...*/" />
+            <marker date="1495619136000" expanded="false" signature="5741:7215" ph="{...}" />
+            <marker date="1495619136000" expanded="false" signature="7221:7381" ph="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -407,10 +450,14 @@
         <state relative-caret-position="320">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#621#622#0" expanded="true" />
-            <element signature="e#710#711#0" expanded="true" />
+            <element signature="docComment;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#getImages#0;class#Utils#0" expanded="false" />
+            <element signature="method#getImages#0;class#Utils#0" expanded="false" />
+            <element signature="class#570:780" expanded="false" />
+            <element signature="docComment;method#isBlack#0;class#Utils#0" expanded="false" />
             <element signature="docComment;method#isWhite#0;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#writeBytes2File#0;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#readBytesFormFile#0;class#Utils#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -421,13 +468,10 @@
           <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#Main#0" expanded="false" />
-            <element signature="docComment;method#main#0;class#Main#0" expanded="false" />
-            <element signature="docComment;method#imagePreProgress#0;class#Main#0" expanded="false" />
-            <element signature="method#imagePreProgress#0;class#Main#0" expanded="false" />
-            <element signature="docComment;method#imageSplit#0;class#Main#0" expanded="false" />
-            <element signature="method#imageSplit#0;class#Main#0" expanded="false" />
             <element signature="docComment;method#getData#0;class#Main#0" expanded="false" />
-            <element signature="method#getData#0;class#Main#0" expanded="false" />
+            <marker date="1495619136000" expanded="false" signature="5507:5661" ph="/**...*/" />
+            <marker date="1495619136000" expanded="false" signature="5741:7215" ph="{...}" />
+            <marker date="1495619136000" expanded="false" signature="7221:7381" ph="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -437,10 +481,14 @@
         <state relative-caret-position="1216">
           <caret line="38" column="14" lean-forward="true" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#621#622#0" expanded="true" />
-            <element signature="e#710#711#0" expanded="true" />
+            <element signature="docComment;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#getImages#0;class#Utils#0" expanded="false" />
+            <element signature="method#getImages#0;class#Utils#0" expanded="false" />
+            <element signature="class#570:780" expanded="false" />
+            <element signature="docComment;method#isBlack#0;class#Utils#0" expanded="false" />
             <element signature="docComment;method#isWhite#0;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#writeBytes2File#0;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#readBytesFormFile#0;class#Utils#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -477,32 +525,166 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/au/edu/uq/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="55" column="79" lean-forward="true" selection-start-line="55" selection-start-column="79" selection-end-line="55" selection-end-column="79" />
+          <folding>
+            <element signature="docComment;class#Main#0" expanded="false" />
+            <element signature="docComment;method#getData#0;class#Main#0" expanded="false" />
+            <marker date="1495619136000" expanded="false" signature="5507:5661" ph="/**...*/" />
+            <marker date="1495619136000" expanded="false" signature="5741:7215" ph="{...}" />
+            <marker date="1495619136000" expanded="false" signature="7221:7381" ph="/**...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/au/edu/uq/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="97" column="47" lean-forward="false" selection-start-line="97" selection-start-column="32" selection-end-line="97" selection-end-column="47" />
+        <state relative-caret-position="408">
+          <caret line="72" column="8" lean-forward="false" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="8" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#621#622#0" expanded="true" />
-            <element signature="e#710#711#0" expanded="true" />
+            <element signature="docComment;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#getImages#0;class#Utils#0" expanded="false" />
+            <element signature="method#getImages#0;class#Utils#0" expanded="false" />
+            <element signature="class#570:780" expanded="false" />
+            <element signature="docComment;method#isBlack#0;class#Utils#0" expanded="false" />
             <element signature="docComment;method#isWhite#0;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#writeBytes2File#0;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#readBytesFormFile#0;class#Utils#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/au/edu/uq/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#Main#0" expanded="false" />
-            <element signature="docComment;method#main#0;class#Main#0" expanded="false" />
-            <element signature="docComment;method#imagePreProgress#0;class#Main#0" expanded="false" />
-            <element signature="method#imagePreProgress#0;class#Main#0" expanded="false" />
-            <element signature="docComment;method#imageSplit#0;class#Main#0" expanded="false" />
-            <element signature="method#imageSplit#0;class#Main#0" expanded="false" />
             <element signature="docComment;method#getData#0;class#Main#0" expanded="false" />
-            <element signature="method#getData#0;class#Main#0" expanded="false" />
+            <marker date="1495619136000" expanded="false" signature="5507:5661" ph="/**...*/" />
+            <marker date="1495619136000" expanded="false" signature="5741:7215" ph="{...}" />
+            <marker date="1495619136000" expanded="false" signature="7221:7381" ph="/**...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/au/edu/uq/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#getImages#0;class#Utils#0" expanded="false" />
+            <element signature="method#getImages#0;class#Utils#0" expanded="false" />
+            <element signature="class#570:780" expanded="false" />
+            <element signature="docComment;method#isBlack#0;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#isWhite#0;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#writeBytes2File#0;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#readBytesFormFile#0;class#Utils#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/au/edu/uq/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="832">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#Main#0" expanded="false" />
+            <element signature="docComment;method#getData#0;class#Main#0" expanded="false" />
+            <marker date="1495619136000" expanded="false" signature="5507:5661" ph="/**...*/" />
+            <marker date="1495619136000" expanded="false" signature="5741:7215" ph="{...}" />
+            <marker date="1495619136000" expanded="false" signature="7221:7381" ph="/**...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/au/edu/uq/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1216">
+          <caret line="38" column="14" lean-forward="true" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
+          <folding>
+            <element signature="docComment;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#getImages#0;class#Utils#0" expanded="false" />
+            <element signature="method#getImages#0;class#Utils#0" expanded="false" />
+            <element signature="class#570:780" expanded="false" />
+            <element signature="docComment;method#isBlack#0;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#isWhite#0;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#writeBytes2File#0;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#readBytesFormFile#0;class#Utils#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/src.zip!/javax/imageio/ImageIO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="654">
+          <caret line="1511" column="31" lean-forward="false" selection-start-line="1511" selection-start-column="26" selection-end-line="1511" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/src.zip!/java/io/File.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="1307" column="19" lean-forward="false" selection-start-line="1307" selection-start-column="19" selection-end-line="1307" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/src.zip!/java/awt/Image.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="168" column="17" lean-forward="false" selection-start-line="168" selection-start-column="17" selection-end-line="168" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/src.zip!/java/awt/Graphics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="709">
+          <caret line="920" column="28" lean-forward="false" selection-start-line="920" selection-start-column="28" selection-end-line="920" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/src.zip!/java/io/BufferedReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="387" column="18" lean-forward="false" selection-start-line="387" selection-start-column="18" selection-end-line="387" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/au/edu/uq/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-994">
+          <caret line="15" column="43" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="43" />
+          <folding>
+            <element signature="docComment;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#getImages#0;class#Utils#0" expanded="false" />
+            <element signature="method#getImages#0;class#Utils#0" expanded="false" />
+            <element signature="class#570:780" expanded="false" />
+            <element signature="docComment;method#isBlack#0;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#isWhite#0;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#writeBytes2File#0;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#readBytesFormFile#0;class#Utils#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/au/edu/uq/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2272">
+          <caret line="82" column="81" lean-forward="false" selection-start-line="82" selection-start-column="81" selection-end-line="82" selection-end-column="81" />
+          <folding>
+            <element signature="docComment;class#Main#0" expanded="false" />
+            <element signature="docComment;method#getData#0;class#Main#0" expanded="false" />
+            <marker date="1495619136000" expanded="false" signature="5507:5661" ph="/**...*/" />
+            <marker date="1495619136000" expanded="false" signature="5741:7215" ph="{...}" />
+            <marker date="1495619136000" expanded="false" signature="7221:7381" ph="/**...*/" />
           </folding>
         </state>
       </provider>
