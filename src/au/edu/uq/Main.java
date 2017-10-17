@@ -19,9 +19,9 @@ public class Main {
 
     private static final String WELCAMO = "   --------   VerificationCodeRecognition   --------   \n"
             + "please select action:\n"
-            + "1. tarin\n"
+            + "1. train\n"
             + "2. recognition\n"
-            + "3. exit\n";
+            + "3. exit";
 
     private static final String TRAIN_RAW_IMAGE_PATH = "./train/0rawimage/";
     private static final String TRAIN_PRE_PROGRESS_IMAGE_PATH = "./train/1preprogress/";
@@ -39,11 +39,10 @@ public class Main {
      * @param args
      */
     public static void main(String[] args) throws IOException {
-        System.out.println(WELCAMO);
-
         Scanner scanner = new Scanner(System.in);
         int actionCode;
         do {
+            System.out.println(WELCAMO);
             actionCode = scanner.nextInt();
             switch (actionCode) {
                 case 1:
@@ -60,6 +59,8 @@ public class Main {
     }
 
     private static void recognition() throws IOException {
+        System.out.println("recognition start:\n");
+
         File recRawImageFile = new File(RECOGNITION_RAW_IMAGE_PATH);
         if (!recRawImageFile.exists()) {
             recRawImageFile.mkdirs();
@@ -70,22 +71,19 @@ public class Main {
             trainDataFile.mkdirs();
         }
 
-        File[] rawImageFiles = Utils.getImages(recRawImageFile);
+        File[] rawImageFiles = Utils.getFileWithEx(recRawImageFile, Utils.IMAGE_FILE_EX);
         StringBuilder rawImageFileName = new StringBuilder();
+        StringBuilder charSimilarity = new StringBuilder();
         for (File imageFile : rawImageFiles) {
             rawImageFileName.setLength(0);
+            charSimilarity.setLength(0);
 
             BufferedImage bufferedImage = ImageIO.read(imageFile);
             bufferedImage = imagePreProgress(bufferedImage);
             for (BufferedImage slitImage : imageSplit(bufferedImage)) {
                 byte[] recData = getData(slitImage);
                 HashMap<String, Double> simis = new HashMap<>();
-                for (File dataFile : trainDataFile.listFiles(new FilenameFilter() {
-                    @Override
-                    public boolean accept(File dir, String name) {
-                        return name.toLowerCase().endsWith(Utils.DATA_FILE_EX);
-                    }
-                })) {
+                for (File dataFile : Utils.getFileWithEx(trainDataFile, Utils.DATA_FILE_EX)) {
                     byte[] trainData = Utils.readBytesFormFile(dataFile);
                     simis.put(dataFile.getName(), Utils.similarity(trainData, recData));
                 }
@@ -100,8 +98,10 @@ public class Main {
                 }
 
                 rawImageFileName.append(maxName.substring(0, maxName.lastIndexOf(Utils.DATA_FILE_EX)));
+                charSimilarity.append(String.format("%.2f", maxSimi)).append(", ");
             }
-            imageFile.renameTo(new File(RECOGNITION_RAW_IMAGE_PATH + rawImageFileName.toString() + Utils.IMAGE_FILE_EX));
+            System.out.println("file \"" + imageFile.getName() + "\" result is " + rawImageFileName.toString()
+                    +  ", similarity for every char is " + charSimilarity.toString() + "\n");
         }
     }
 
@@ -130,38 +130,48 @@ public class Main {
 
         System.out.println("using \"" + TRAIN_RAW_IMAGE_PATH + "\" folder images for tarining……\n");
 
-        File[] images = Utils.getImages(trainRawImageFile);
+        File[] images = Utils.getFileWithEx(trainRawImageFile, Utils.IMAGE_FILE_EX);
         if (null != images) {
             if (images.length == 0) {
                 System.out.println("verification code image not found in folder \"" + TRAIN_RAW_IMAGE_PATH + "\"\n");
             } else {
+                System.out.println("pre progressing verification code image\n");
                 for (File imageFile : images) {
-                    System.out.println("pre progress verification code image,resluts can be found in folder \""
-                            + TRAIN_RAW_IMAGE_PATH + "\"\n");
                     BufferedImage preProgressImage = imagePreProgress(ImageIO.read(imageFile));
                     String imageFileName = imageFile.getName();
                     ImageIO.write(preProgressImage,
-                            "JPG",
+                            "PNG",
                             new File(TRAIN_PRE_PROGRESS_IMAGE_PATH + imageFileName));
-                    List<BufferedImage> splitImages = imageSplit(preProgressImage);
-                    if (splitImages.size() == imageFileName.substring
-                            (0, imageFileName.length() - Utils.IMAGE_FILE_EX.length()).length()) {
+                }
+                System.out.println("pre progress success! resluts can be found in folder\""
+                        + TRAIN_PRE_PROGRESS_IMAGE_PATH + "\"\n");
+
+                System.out.println("spliting verification code image\n");
+                for (File imageFile : Utils.getFileWithEx(trainPreImageFile, Utils.IMAGE_FILE_EX)) {
+                    String imageFileName = imageFile.getName();
+                    List<BufferedImage> splitImages = imageSplit(ImageIO.read(imageFile));
+                    if (splitImages.size() == imageFileName.length() - Utils.IMAGE_FILE_EX.length()) {
                         for (int i = 0; i < splitImages.size(); i++) {
                             BufferedImage splitImage = splitImages.get(i);
-                            File charFile = new File(TRAIN_SPLIT_IMAGE_PATH + imageFileName.charAt(i) + Utils.IMAGE_FILE_EX);
-                            if (!charFile.exists()) {
-                                ImageIO.write(splitImage, "JPG", charFile);
-                            }
-
-                            File dataFile = new File(TRAIN_DATA_PATH + imageFileName.charAt(i) + Utils.DATA_FILE_EX);
-                            if (!dataFile.exists()) {
-                                Utils.writeBytes2File(getData(splitImage), dataFile);
-                            }
+                            File charFile = new File(TRAIN_SPLIT_IMAGE_PATH + imageFileName.charAt(i)
+                                    + Utils.IMAGE_FILE_EX);
+                            ImageIO.write(splitImage, "PNG", charFile);
                         }
                     } else {
-                        throw new IOException("raw image file name is wrong");
+                        System.out.println("\"" + imageFileName + "\"was divided into " + splitImages.size() + " pieces,continue anyway.\n" );
                     }
                 }
+                System.out.println("split success! resluts can be found in folder\"" + TRAIN_SPLIT_IMAGE_PATH + "\"\n");
+
+                System.out.println("transforming verification code image\n");
+                for (File imageFile : Utils.getFileWithEx(trainSplitImageFile, Utils.IMAGE_FILE_EX)) {
+                    BufferedImage splitImage = ImageIO.read(imageFile);
+                    String imageFileName = imageFile.getName();
+                    File dataFile = new File(TRAIN_DATA_PATH + imageFileName.substring(0, imageFileName.length()
+                            - Utils.IMAGE_FILE_EX.length()) + Utils.DATA_FILE_EX);
+                    Utils.writeBytes2File(getData(splitImage), dataFile);
+                }
+                System.out.println("transform success! resluts can be found in folder\"" + TRAIN_DATA_PATH + "\"\n\ntrain complete!\n");
             }
         } else {
             throw new IOException("image folder path is unaviliable");
@@ -271,7 +281,7 @@ public class Main {
                 subImages.add(
                         Utils.toBufferedImage(
                                 subImage.getSubimage(0, start, width, end - start + 1)
-                                        .getScaledInstance(SCALE_LENGTH, SCALE_LENGTH, Image.SCALE_SMOOTH)));
+                                        .getScaledInstance(SCALE_LENGTH, SCALE_LENGTH, Image.SCALE_DEFAULT)));
             }
         }
 

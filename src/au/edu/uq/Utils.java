@@ -20,12 +20,12 @@ public class Utils {
      * @param dirFile
      * @return
      */
-    public static File[] getImages(File dirFile) {
+    public static File[] getFileWithEx(File dirFile, String ex) {
         if (dirFile.exists() && dirFile.isDirectory()) {
             return dirFile.listFiles(new FilenameFilter() {
                 @Override
                 public boolean accept(File dir, String name) {
-                    return name.toLowerCase().endsWith(IMAGE_FILE_EX);
+                    return name.toLowerCase().endsWith(ex);
                 }
             });
         }
@@ -93,7 +93,7 @@ public class Utils {
 
     public static BufferedImage toBufferedImage(Image image) {
         BufferedImage bufferedImage = new BufferedImage(image.getWidth(null), image.getHeight(null)
-                , BufferedImage.TYPE_INT_RGB);
+                , BufferedImage.TYPE_INT_ARGB);
         Graphics bGr = bufferedImage.getGraphics();
         bGr.drawImage(image, 0, 0, null);
         bGr.dispose();
